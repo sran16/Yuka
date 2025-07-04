@@ -19,11 +19,11 @@ class _SearchBarState extends State<ProductSearchBar> {
   }
 
   void _performSearch(String query) {
-    if (query.trim().isNotEmpty) {
-      Provider.of<ProductProvider>(context, listen: false).searchProducts(query);
-    } else {
+    if (query.trim().length < 3) {
       Provider.of<ProductProvider>(context, listen: false).clearSearchResults();
+      return;
     }
+    Provider.of<ProductProvider>(context, listen: false).searchProducts(query);
   }
 
   @override

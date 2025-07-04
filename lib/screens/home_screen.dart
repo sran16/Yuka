@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Yuka',
+          'YUKI',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 24,
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('À propos de Yuka'),
+        title: const Text('À propos de YUKI'),
         content: const Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,12 +120,11 @@ class _ScannerTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ProductProvider>(
       builder: (context, productProvider, child) {
-        return Padding(
+        return SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               const SizedBox(height: 40),
-              
               // Logo ou icône
               Container(
                 width: 120,
@@ -140,9 +139,7 @@ class _ScannerTab extends StatelessWidget {
                   color: Theme.of(context).primaryColor,
                 ),
               ),
-              
               const SizedBox(height: 32),
-              
               // Titre
               const Text(
                 'Scanner un produit',
@@ -152,9 +149,7 @@ class _ScannerTab extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              
               const SizedBox(height: 16),
-              
               // Description
               const Text(
                 'Scannez le code-barres d\'un produit pour obtenir des informations nutritionnelles détaillées.',
@@ -164,14 +159,10 @@ class _ScannerTab extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              
               const SizedBox(height: 40),
-              
               // Bouton scanner
               const ScannerButton(),
-              
               const SizedBox(height: 40),
-              
               // Affichage du produit scanné
               if (productProvider.isLoading)
                 const Center(

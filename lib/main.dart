@@ -23,7 +23,7 @@ class YukaApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => FavoritesProvider()),
       ],
       child: MaterialApp(
-        title: 'Yuka',
+        title: 'YUKI',
         theme: ThemeData(
           primarySwatch: Colors.green,
           primaryColor: const Color(0xFF4CAF50),
