@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Yuka est une application qui vous aide à décoder les étiquettes alimentaires.',
+              'YUKI est une application qui vous aide à décoder les étiquettes alimentaires.',
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 16),
